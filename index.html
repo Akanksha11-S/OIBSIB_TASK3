@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="converter-card">
+            <div class="header">
+                <h1>🌡️ Temperature Converter</h1>
+                <p>Convert between Celsius, Fahrenheit, and Kelvin</p>
+            </div>
+
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="temperature-input">Temperature Value</label>
+                    <input 
+                        type="text" 
+                        id="temperature-input" 
+                        placeholder="Enter temperature"
+                        autocomplete="off"
+                    >
+                    <span class="error-message" id="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="unit-select">Convert From</label>
+                    <select id="unit-select">
+                        <option value="celsius">Celsius (°C)</option>
+                        <option value="fahrenheit">Fahrenheit (°F)</option>
+                        <option value="kelvin">Kelvin (K)</option>
+                    </select>
+                </div>
+
+                <button id="convert-btn" class="convert-btn">Convert Temperature</button>
+            </div>
+
+            <div class="results-section" id="results-section">
+                <h2>Conversion Results</h2>
+                <div class="results-grid">
+                    <div class="result-card celsius-card">
+                        <div class="result-label">Celsius</div>
+                        <div class="result-value" id="celsius-result">--</div>
+                        <div class="result-unit">°C</div>
+                    </div>
+                    <div class="result-card fahrenheit-card">
+                        <div class="result-label">Fahrenheit</div>
+                        <div class="result-value" id="fahrenheit-result">--</div>
+                        <div class="result-unit">°F</div>
+                    </div>
+                    <div class="result-card kelvin-card">
+                        <div class="result-label">Kelvin</div>
+                        <div class="result-value" id="kelvin-result">--</div>
+                        <div class="result-unit">K</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
